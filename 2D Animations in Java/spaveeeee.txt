@@ -1,0 +1,141 @@
+import java.awt.image.*;
+import java.awt;
+import java.awt.event.*;
+import javax.swing.*;
+
+public class InvadersApplication extends JFrame implements Runable, KeyListener{
+
+    // member data
+    private static final Dimension WindowSize = new Dimension(800,600);
+    private BufferStrategy strategy;
+    priavte static final int NUMALIENS = 30;
+    priavte Alien[] AliensArray = new Alien[NUMALIENS];
+    private Spaceship PlayerShip;
+    private static String workingDirectory;
+    private Image alienImage;
+
+    // constructor
+    public InvadersApplication(){
+        this.setTitle("Space Invaders");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        // Display the window, centered on the screen
+        Dimension screensize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
+        int x = screensize.width/2 - WindowSize.width/2;
+        int y = screensize.height/2 - WindowSize.height/2;
+        setBounds(x, y, WindowSize.width, WindowSize.height);
+        addKeyListener(this);
+        setVisible(true);
+
+
+        createBufferStrategy(2);
+        strategy = getBufferStrategy();
+
+        // set up JFrame
+        setBounds(100, 100, 300, 300);
+        setVisible(true);
+        ImageIcon icon = new ImageIcon(workingDirectory + "\\alien_ship_1.png");
+        alienImage = icon.getImage();
+        repaint();
+
+    }
+
+    // threads entry point
+    public void run(){
+        while (true) {
+            try {
+                Thread.sleep(20);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            for (int i = 0; i < NUMALIENS; i++) AliensArray[i].moveEnemy();
+            PlayerShip.movePlayer();
+            this.repaint();
+        }
+    }
+
+    // Three Keyboard event handler functions
+    public void keyPressed(KeyEvent e){
+        if(e.getKeyCode() == KeyEvent.VK_D){
+            PlayerShip.setXSpeed(1);
+        }
+        if(e.getKeyCode() == KeyEvent.VK_A){
+            PlayerShip.setXSpeed(-1);
+        }
+    }
+    public void keyReleased(KeyEvent e){
+        if(e.getKeyCode() == KeyEvent.VK_D){
+            PlayerShip.setXSpeed(0);
+        }
+        if(e.getKeyCode() == keyEvent.VK_A){
+            PlayerShip.setXSpeed(0);
+        }
+    }
+    public void keyTyped(KeyEvent e){
+        if (e.getKeyCode() == KeyEvent.VK_D) {
+            PlayerShip.setXSpeed(1);
+        }
+        if (e.getKeyCode() == KeyEvent.VK_A) {
+            PlayerShip.setXSpeed(-1);
+        }
+    }
+
+    // application paint method
+    public void paint(Graphics g){
+        g = strategy.get.DrawGraphics();
+        // draw a black rectangle on the whole canvas
+        g.setColor(Color.BLACK);
+        g.fillRect(0, 0, 300, 300);
+        // display the image (final argument is an ‘ImageObserver’ object)
+        g.drawImage(alienImage, 150, 150, null);
+
+        strategy.show();
+    }
+
+    // application entry point
+    public static void main(String[] args){
+        workingDirectory = System.getProperty("user.dir");
+        System.out.println("Working Directory = " + workingDirectory);
+        DisplayRasterImage d = new DisplayRasterImage();
+    }
+}
+
+import java.awt.*;
+
+public class Sprite2D {
+
+
+    // member data
+    protected double x,y;
+    protected double xSpeed = 0
+    protected Image myImage;
+
+
+    // constructor
+    public Sprite2D(Image i){
+        myImage = i;
+    }
+
+    public void moveEnemy(){
+
+    }
+
+    public void setPosition(double xx, double yy){
+        x = xx;
+        y = yy;
+    }
+
+    public void movePlayer(){
+        x =+ xSpeed * 2;
+    }
+
+    public void setxSpeed(double dx){
+        xSpeed = dx;
+    }
+
+    public void paint(Graphics g){
+        g.setColor(Color.Black);
+        g.drawImage(myImage, (int)x, (int)y, 70, 50, null);
+    }
+
+}
