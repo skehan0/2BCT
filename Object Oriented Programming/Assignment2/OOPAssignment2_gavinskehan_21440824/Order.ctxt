@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=Order
+comment1.params=cart\ customer
+comment1.target=Order(ShoppingCart,\ Customer)
+comment2.params=shippingAddress
+comment2.target=void\ setShippingAddress(Address)
+comment3.params=payment
+comment3.target=void\ setPayment(Payment)
+comment4.params=
+comment4.target=java.lang.String\ toString()
+comment5.params=
+comment5.target=Customer\ getCustomer()
+comment6.params=
+comment6.target=boolean\ isPaymentSuccessful()
+comment7.params=
+comment7.target=int\ getId()
+comment8.params=
+comment8.target=Address\ getShippingAddress()
+comment9.params=
+comment9.target=Payment\ getPayment()
+numComments=10

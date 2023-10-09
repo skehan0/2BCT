@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Payment
+comment1.params=billingAddress\ cardType\ cardNum\ expDate
+comment1.target=Payment(Address,\ java.lang.String,\ java.lang.String,\ java.lang.String)
+comment2.params=
+comment2.target=boolean\ validateCardType()
+comment3.params=
+comment3.target=boolean\ validateCardNumber()
+comment4.params=
+comment4.target=boolean\ validate()
+comment5.params=
+comment5.target=boolean\ validated()
+comment6.params=
+comment6.target=Address\ getBillingAddress()
+numComments=7

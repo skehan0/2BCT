@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=GoBus
+comment1.params=server
+comment1.target=GoBus(Server)
+comment2.params=
+comment2.target=java.util.ArrayList\ getAllTrips()
+comment3.params=
+comment3.target=java.lang.String\ getVendorName()
+comment4.params=booking
+comment4.target=boolean\ bookTripServer(Booking)
+numComments=5

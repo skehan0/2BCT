@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.target=BusVendor
+comment1.params=
+comment1.target=java.util.ArrayList\ getAllTrips()
+comment10.params=tripId\ seats
+comment10.target=Booking\ bookTrip(int,\ int)
+comment2.params=booking
+comment2.target=boolean\ bookTripServer(Booking)
+comment3.params=
+comment3.target=java.lang.String\ getVendorName()
+comment4.params=
+comment4.target=java.util.ArrayList\ getAllAvailableTrips()
+comment5.params=trips
+comment5.target=void\ printTrips(java.util.ArrayList)
+comment6.params=
+comment6.target=void\ printAllTrips()
+comment7.params=
+comment7.target=void\ printAllAvailableTrips()
+comment8.params=id
+comment8.target=Trip\ getTrip(int)
+comment9.params=trip\ seats
+comment9.target=Booking\ bookTrip(Trip,\ int)
+numComments=11

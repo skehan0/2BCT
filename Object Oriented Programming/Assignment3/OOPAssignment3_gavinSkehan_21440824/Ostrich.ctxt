@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=Ostrich
+comment1.params=name
+comment1.target=Ostrich(java.lang.String)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Ostrich\r\n
+comment2.params=
+comment2.target=boolean\ flies()
+comment3.params=
+comment3.target=boolean\ isTall()
+comment4.params=
+comment4.target=boolean\ hasLongThinLegs()
+comment5.params=
+comment5.target=java.lang.String\ toString()
+comment5.text=\r\n\ toString\ method\ returns\ a\ String\ representation\ of\ the\ bird\r\n\ What\ superclass\ has\ Canary\ inherited\ this\ method\ from?\ \r\n
+comment6.params=obj
+comment6.target=boolean\ equals(java.lang.Object)
+numComments=7

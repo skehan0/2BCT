@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Address
+comment1.params=street\ city\ county\ zip
+comment1.target=Address(java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String)
+comment2.params=street
+comment2.target=void\ setStreet(java.lang.String)
+comment3.params=city
+comment3.target=void\ setCity(java.lang.String)
+comment4.params=county
+comment4.target=void\ setCounty(java.lang.String)
+comment5.params=zip
+comment5.target=void\ setZip(java.lang.String)
+comment6.params=
+comment6.target=java.lang.String\ toString()
+numComments=7
