@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=CT255_HashFunction1
+comment0.text=\r\n\r\n\ @author\ Gavin\ Skehan\r\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=s
+comment2.target=int\ hashF1(java.lang.String)
+comment3.params=len\ dic
+comment3.target=java.lang.String\ randomPassword(int,\ java.lang.String)
+numComments=4
